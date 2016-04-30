@@ -35,13 +35,13 @@ ctx.strokeStyle = "black";
 ctx.stroke();
 };
 
-this.reset_grid(){
+this.reset_grid = function(){
 this.grid[4][4] = 1
 this.grid[5][5] = 1
 this.grid[6][6] = 1
 }
 
-this.next_gen(){
+this.next_gen = function(){
 
 }
 
