@@ -17,8 +17,8 @@ for (var x = 0; x <= this.size_x; x++) {
 }
 
 for (var y = 0; x <= this.size_y; y++) {
-    ctx.moveTo(0.5 + y*10, 10);
-    ctx.lineTo(0.5 + y*10, this.size_x*10);
+    ctx.moveTo(10 , 0.5 + y*10);
+    ctx.lineTo( this.size_x*10 , 0.5 + y*10);
 }
 
 ctx.strokeStyle = "black";
