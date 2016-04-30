@@ -16,6 +16,11 @@ for (var x = 0; x <= this.size_x; x++) {
     ctx.lineTo(0.5 + x*10, this.size_y*10);
 }
 
+for (var y = 0; x <= this.size_y; y++) {
+    ctx.moveTo(0.5 + y*10, 10);
+    ctx.lineTo(0.5 + y*10, this.size_x*10);
+}
+
 ctx.strokeStyle = "black";
 ctx.stroke();
 };
