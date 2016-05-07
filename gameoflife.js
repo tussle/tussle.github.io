@@ -28,7 +28,9 @@ this.grid[5][5] = 1
 for( var x = 0; x < this.size_x; x++){
     for(var y = 0; y< this.size_y; y++){
 	    if(this.grid[x][y] == 1){
-	        ctx.fillRect(0.5 + (x)*10 , 0.5+ (y)*10 , 10.5 + (x)*10 , 10.5+ (y)*10)//0.5 + x*10 +this.size_x , 0.5 + y*10 +this.size_y );
+		    var xstart = .5 + this.size_x * x 
+			var ystart= .5 + this.size_y * y 
+	        ctx.fillRect( xstart , ystart , xstart + this.square_side, ystart + this.square_side)//0.5 + x*10 +this.size_x , 0.5 + y*10 +this.size_y );
 		}
 	}
 }
