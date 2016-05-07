@@ -18,10 +18,10 @@ for (var x = 0; x <= this.size_x; x++) {
     ctx.lineTo(0.5 + x*this.square_side , .5 + this.size_y*this.square_side );
 }
 
-//for (var y = 0; y <= this.size_y; y++) {
-//    ctx.moveTo(.5 , 0.5 + y*this.square_side );
-//    ctx.lineTo( .5 + this.size_x*this.square_side  , 0.5 + y*this.square_side );
-//}
+for (var y = 0; y <= this.size_y; y++) {
+    ctx.moveTo(.5 , 0.5 + y*this.square_side );
+    ctx.lineTo( .5 + this.size_x*this.square_side  , 0.5 + y*this.square_side );
+}
 //this.grid[4][4] = 1
 this.grid[5][5] = 1
 //this.grid[6][6] = 1
