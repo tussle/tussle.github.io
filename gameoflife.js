@@ -7,9 +7,18 @@ this.size_y = 10;
 
 this.square_side = 10;
 
-this.grid = new Array(this.size_y).fill(new Array(this.size_x)).fill(0);
+this.grid = Create2DArray(rows,columns);
 //this.grid = [[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],
 //[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]]
+
+function Create2DArray(rows,columns) {
+   var x = new Array(rows);
+   for (var i = 0; i < rows; i++) {
+       x[i] = new Array(columns);
+	   x[i].fill(0);
+   }
+   return x;
+}
 
 this.draw_grid = function(){
 var c = this.canvas;
