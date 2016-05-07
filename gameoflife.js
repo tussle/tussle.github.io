@@ -23,7 +23,18 @@ for (var y = 0; y <= this.size_y; y++) {
     ctx.lineTo( .5 + this.size_x*this.square_side  , 0.5 + y*this.square_side );
 }
 //this.grid[4][4] = 1
+for( var x = 0; x < this.size_x; x++){
+    for(var y = 0; y< this.size_y; y++){
+	    console.log("x = " + x + " y = " + y + "grid "+ this.grid[x][y])
+	}
+}
 this.grid[5][5] = 1
+
+for( var x = 0; x < this.size_x; x++){
+    for(var y = 0; y< this.size_y; y++){
+	    console.log("x = " + x + " y = " + y + "grid "+ this.grid[x][y])
+	}
+}
 //this.grid[6][6] = 1
 for( var x = 0; x < this.size_x; x++){
     for(var y = 0; y< this.size_y; y++){
