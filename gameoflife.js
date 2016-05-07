@@ -28,7 +28,7 @@ for( var x = 0; x < this.size_x; x++){
 	    console.log("x = " + x + " y = " + y + "grid "+ this.grid[x][y])
 	}
 }
-this.grid[5][5] = 1
+this.grid[5][5] = 1;
 
 for( var x = 0; x < this.size_x; x++){
     for(var y = 0; y< this.size_y; y++){
