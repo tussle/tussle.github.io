@@ -102,7 +102,7 @@ this.living_neighbours = function(x,y){
 }
 this.survives = function(x,y){
     var count = this.living_neighbours(x,y);
-	return  count > 3 && count >1 ? false:true;
+	return  count <= 3 && count >1 ? true:false;
 }
 
 this.is_born = function(x,y){
