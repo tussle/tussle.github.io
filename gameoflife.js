@@ -8,8 +8,6 @@ this.size_y = 10;
 this.square_side = 10;
 
 this.grid = Create2DArray(this.size_x,this.size_y);
-//this.grid = [[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],
-//[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]]
 
 function Create2DArray(rows,columns) {
    var x = new Array(rows);
@@ -34,18 +32,9 @@ for (var y = 0; y <= this.size_y; y++) {
     ctx.lineTo( .5 + this.size_x*this.square_side  , 0.5 + y*this.square_side );
 }
 //this.grid[4][4] = 1
-for( var x = 0; x < this.size_x; x++){
-    for(var y = 0; y< this.size_y; y++){
-	    console.log("x = " + x + " y = " + y + "grid "+ this.grid[x][y]);
-	}
-}
+
 this.grid[5][5] = 1;
 
-for( var x = 0; x < this.size_x; x++){
-    for(var y = 0; y< this.size_y; y++){
-	    console.log("x = " + x + " y = " + y + "grid "+ this.grid[x][y]);
-	}
-}
 //this.grid[6][6] = 1
 for( var x = 0; x < this.size_x; x++){
     for(var y = 0; y< this.size_y; y++){
@@ -53,7 +42,7 @@ for( var x = 0; x < this.size_x; x++){
 		    console.log("x = " + x + " y = " + y)
 		    var xstart = .5 + this.size_x * x ;
 			var ystart= .5 + this.size_y * y ;
-	        ctx.fillRect( xstart , ystart , this.square_side, this.square_side);//0.5 + x*10 +this.size_x , 0.5 + y*10 +this.size_y );
+	        ctx.fillRect( xstart , ystart , this.square_side, this.square_side);
 		}
 	}
 }
