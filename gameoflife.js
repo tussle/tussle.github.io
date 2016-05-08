@@ -73,6 +73,7 @@ this.next_gen = function(){
 			}
 		}
 	}
+	console.log(newgrid);
     this.grid = newgrid;
 }
 
