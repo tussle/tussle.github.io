@@ -21,7 +21,7 @@ function Create2DArray(rows,columns) {
 this.draw_grid = function(){
 var c = this.canvas;
 var ctx = c.getContext("2d");
-
+ctx.clearRect(0, 0, c.width, c.height);
 for (var x = 0; x <= this.size_x; x++) {
     ctx.moveTo(0.5 + x*this.square_side , .5);
     ctx.lineTo(0.5 + x*this.square_side , .5 + this.size_y*this.square_side );
