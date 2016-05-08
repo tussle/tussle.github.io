@@ -73,7 +73,9 @@ this.next_gen = function(){
 			}
 		}
 	}
+	for(i in newgrid){
 	console.log(newgrid);
+	}
     this.grid = newgrid;
 }
 
