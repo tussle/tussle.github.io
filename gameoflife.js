@@ -31,11 +31,11 @@ for (var y = 0; y <= this.size_y; y++) {
     ctx.moveTo(.5 , 0.5 + y*this.square_side );
     ctx.lineTo( .5 + this.size_x*this.square_side  , 0.5 + y*this.square_side );
 }
-//this.grid[4][4] = 1
+this.grid[4][4] = 1
 
 this.grid[5][5] = 1;
 
-//this.grid[6][6] = 1
+this.grid[6][6] = 1
 for( var x = 0; x < this.size_x; x++){
     for(var y = 0; y< this.size_y; y++){
 	    if(this.grid[x][y] == 1){
@@ -63,7 +63,7 @@ this.next = function(){
 }
 
 this.next_gen = function(){
-    var newgrid = new Array(this.size_y).fill(new Array(this.size_x).fill(0));
+    var newgrid = Create2DArray(this.size_x,this.size_y);
 	for(var x = 0 ; x < this.size_x ; x++){
 		for(var y = 0 ; y < this.size_y ; y++){
 			if(this.grid[x][y] == 1 && this.survives(x,y)){
