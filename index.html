@@ -10,27 +10,31 @@
 <canvas id="myCanvas" width="200" height="200"></canvas>
 <button onClick="game.next()" type="button">next</button>
 <script type="text/javascript" language="javascript">
-var game = new Game(document.getElementById("myCanvas"))
+document.addEventListener("DOMContentLoaded", init, false);
+
+    function init()
+    {
+      var canvas = document.getElementById("myCanvas");
+      canvas.addEventListener("mousedown", getPosition, false);
+	  var game = new Game(document.getElementById("myCanvas"))
+	  game.reset_grid();
+      game.draw_grid();
+    }
+	
+	function getPosition(event)
+	{
+	  var x = event.x;
+	  var y = event.y;
+
+	  var canvas = document.getElementById("canvas");
+
+	  x -= canvas.offsetLeft;
+	  y -= canvas.offsetTop;
+
+	  game.change(x,y)
+	}
+
 </script>
 
-<script type="text/javascript" language="javascript">
-game.reset_grid();
-game.draw_grid();
-
-canvas.addEventListener("mousedown", getPosition, false);
-
-function getPosition(event)
-{
-  var x = event.x;
-  var y = event.y;
-
-  var canvas = document.getElementById("canvas");
-
-  x -= canvas.offsetLeft;
-  y -= canvas.offsetTop;
-
-  game.change(x,y)
-}
-</script>
 </body>
 </html>
