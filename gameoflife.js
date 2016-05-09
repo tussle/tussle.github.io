@@ -115,5 +115,6 @@ this.change = function(x,y){
 	x = x/this.size_x;
 	y= y/this.size_y;
 	this.grid[x][y] = this.grid[x][y] == 0? 1:0;
+	this.draw_grid();
 }
 }
