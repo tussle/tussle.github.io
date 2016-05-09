@@ -79,7 +79,7 @@ this.get_neighbours = function(x,y){
     var neighbours = []
     for(var i = -1; i < 2; i++){
 	    for(var j = -1; j < 2; j++){
-		    if(x+i >= 0 && x+i < this.size_x && y+j >= 0 && y+j < this.size_y){
+		    if(x+i >= 0 && x+i < this.size_x && y+j >= 0 && y+j < this.size_y && (x+i != x && y+j != y)){
 		        neighbours.push([x+i,y+j])
 			}
 		}
@@ -89,7 +89,7 @@ this.get_neighbours = function(x,y){
 
 this.living_neighbours = function(x,y){
     var count = 0;
-	alert(this.get_neighbours(x,y))
+	alert("x = "+x +" y = "+y +" " this.get_neighbours(x,y))
 	for(p in this.get_neighbours(x,y)){
 	
 	    if(this.grid[p[0]][p[1]] == 1){
