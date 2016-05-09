@@ -90,7 +90,9 @@ this.get_neighbours = function(x,y){
 this.living_neighbours = function(x,y){
     var count = 0;
 	for(p in this.get_neighbours(x,y)){
+	
 	    if(this.grid[p[0]][p[1]] == 1){
+		    console.log(" each neighbour "+p[0] + " " + p[1])
 		    count++;
 		}
 	}
