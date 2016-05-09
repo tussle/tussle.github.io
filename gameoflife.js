@@ -95,7 +95,7 @@ this.living_neighbours = function(x,y){
 	var neighbours = this.get_neighbours(x,y)
 	var neighboursx = neighbours[0];
 	var neighboursy = neighbours[1];
-	for(var i in range neighbours.length ){
+	for(var i = 0; i < neighboursx.length; i++ ){
 	    
 	    if(this.grid[ neighboursx[i] ][ neighboursy[i] ] == 1){
 		
