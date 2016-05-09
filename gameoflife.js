@@ -89,6 +89,7 @@ this.get_neighbours = function(x,y){
 
 this.living_neighbours = function(x,y){
     var count = 0;
+	alert(this.get_neighbours(x,y))
 	for(p in this.get_neighbours(x,y)){
 	
 	    if(this.grid[p[0]][p[1]] == 1){
