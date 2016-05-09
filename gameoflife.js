@@ -80,7 +80,7 @@ this.get_neighbours = function(x,y){
 	var neighboursy = []
     for(var i = -1; i < 2; i++){
 	    for(var j = -1; j < 2; j++){
-		    if(x+i >= 0 && x+i < this.size_x && y+j >= 0 && y+j < this.size_y && (x+i != x && y+j != y)){
+		    if(x+i >= 0 && x+i < this.size_x && y+j >= 0 && y+j < this.size_y && !(x+i == x && y+j == y)){
 		        neighboursx.push(x+i);
 				neighboursy.push(y+j);
 			}
