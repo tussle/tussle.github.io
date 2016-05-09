@@ -89,9 +89,9 @@ this.get_neighbours = function(x,y){
 
 this.living_neighbours = function(x,y){
     var count = 0;
-	alert("x = "+x +" y = "+y +" " +this.get_neighbours(x,y))
+	console.log("x = "+x +" y = "+y +" " +this.get_neighbours(x,y))
 	for(p in this.get_neighbours(x,y)){
-	
+	    console.log(p[0] + "  " + p[1]);
 	    if(this.grid[p[0]][p[1]] == 1){
 		    console.log(" each neighbour "+p[0] + " " + p[1])
 		    count++;
