@@ -112,8 +112,8 @@ this.set_shape = function(shape){
 }
 
 this.change = function(x,y){
-	x = x/this.size_x;
-	y= y/this.size_y;
+	x = Math.floor(x/this.size_x);
+	y= Math.floor(y/this.size_y);
 	this.grid[x][y] = this.grid[x][y] == 0? 1:0;
 	this.draw_grid();
 }
