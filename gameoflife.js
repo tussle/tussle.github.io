@@ -76,24 +76,29 @@ this.next_gen = function(){
 }
 
 this.get_neighbours = function(x,y){
-    var neighbours = []
+    var neighboursx = []
+	var neighboursy = []
     for(var i = -1; i < 2; i++){
 	    for(var j = -1; j < 2; j++){
 		    if(x+i >= 0 && x+i < this.size_x && y+j >= 0 && y+j < this.size_y && (x+i != x && y+j != y)){
-		        neighbours.push([x+i,y+j])
+		        neighboursx.push(x+i);
+				neighboursy.push(y+j);
 			}
 		}
 	}
-    return neighbours
+    return [neighboursx,neighboursy]
 }
 
 this.living_neighbours = function(x,y){
     var count = 0;
 	console.log("x = "+x +" y = "+y +" " +this.get_neighbours(x,y))
-	for(p in this.get_neighbours(x,y)){
-	    console.log(p[0] + "  " + p[1]);
-	    if(this.grid[p[0]][p[1]] == 1){
-		    console.log(" each neighbour "+p[0] + " " + p[1])
+	var neighbours = this.get_neighbours(x,y)
+	var neighboursx = neighbours[0];
+	var neighboursy = neighbours[1];
+	for(var i in range neighbours.length ){
+	    
+	    if(this.grid[ neighboursx[i] ][ neighboursy[i] ] == 1){
+		
 		    count++;
 		}
 	}
