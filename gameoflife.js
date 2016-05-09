@@ -106,4 +106,14 @@ this.is_born = function(x,y){
 	return  count == 3 ? true:false;
 }
 
+
+this.set_shape = function(shape){
+//TODO add various shape defintions from drop down menu on index page
+}
+
+this.change = function(x,y){
+	x = x/this.size_x;
+	y= y/this.size_y;
+	this.grid[x][y] = this.grid[x][y] == 0? 1:0;
+}
 }
