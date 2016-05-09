@@ -11,12 +11,12 @@
 <button onClick="game.next()" type="button">next</button>
 <script type="text/javascript" language="javascript">
 document.addEventListener("DOMContentLoaded", init, false);
-
+	var game = null;
     function init()
     {
       var canvas = document.getElementById("myCanvas");
       canvas.addEventListener("mousedown", getPosition, false);
-	  var game = new Game(document.getElementById("myCanvas"))
+	  game = new Game(document.getElementById("myCanvas"))
 	  game.reset_grid();
       game.draw_grid();
     }
