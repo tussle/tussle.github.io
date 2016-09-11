@@ -1,7 +1,7 @@
 <!DOCTYPE html\>
 <html>
 <head>
-<script src="gameoflife.js"></script>
+<script src="LightOut.js"></script>
 </head>
 <body>
 	<header>
@@ -19,19 +19,14 @@
 	</header>
 	
 	<section>
-		<ul>
-		    <li><a href='#'>conways game of life</a></li> 
-			<li><a href='lighouts.html'>lights out</a></li>
-		</ul>
+		
 	</section>
     <section id="game1">
 		<header>
-			<h2> Conways game of life </h2>
+			<h2> Lights Out </h2>
         </header>
 		<section>
 			<canvas id="myCanvas" width="200" height="200"></canvas>
-			<button onClick="game.next()" type="button">next</button>
-			<button onClick="game.play()" type="button">play</button>
 			<script type="text/javascript" language="javascript">
 				document.addEventListener("DOMContentLoaded", init, false);
 				var game = null;
@@ -39,7 +34,7 @@
 				{
 				  var canvas = document.getElementById("myCanvas");
 				  canvas.addEventListener("mousedown", getPosition, false);
-				  game = new Game(document.getElementById("myCanvas"))
+				  game = new LightsOutGame(document.getElementById("myCanvas"))
 				  game.reset_grid();
 				  game.draw_grid();
 				}
