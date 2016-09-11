@@ -94,7 +94,7 @@ this.change = function(x,y){
 	neighbours = this.get_neighbours(x,y)
 	this.grid[x][y] = this.grid[x][y] == 0? 1:0;
 	for(i=0; i < neighbours.length; i++){
-	    this.grid[negihbours[0][i]][neighbours[1][i]] = this.grid[negihbours[0][i]][neighbours[1][i]] == 0? 1:0;
+	    this.grid[neighbours[0][i]][neighbours[1][i]] = this.grid[neighbours[0][i]][neighbours[1][i]] == 0? 1:0;
 	}
 	this.draw_grid();
 }
